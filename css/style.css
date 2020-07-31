@@ -370,9 +370,14 @@ margin-left: 15%;
 }
 .box9{
   width: 100%;
-  height: 1200px;
-  background-color: whitesmoke;
+  height: 500px;
+  background-color: white;
   margin: 0;
+}
+
+.hands{
+  margin-left: 35%;
+  margin-bottom: 5%;
 }
 
 .box10{
@@ -401,14 +406,7 @@ margin-right: auto;
   margin-top: 10%;
   font-family: 'Noto Serif JP', serif;
 }
-.box9-2{
-  width: 35%;
-  height: 100%;
-margin-left: auto;
-margin-right: auto;
-  margin-top: 10%;
-  font-family: 'Noto Serif JP', serif;
-}
+
 
 .box9-1 h2{
   font-size: 2.5rem;
@@ -471,6 +469,9 @@ margin-right: auto;
   margin-left:1%;
 }
 
+.text{
+  width: 40%;
+}
 
 /* 950px以下 */
 @media (max-width: 950px) {
@@ -510,8 +511,7 @@ margin-right: auto;
 
   .box9{
     width: 100%;
-    height: 1000px;
-    background-color: whitesmoke;
+    height: 400px;
     margin: 0;
   }
 
@@ -520,10 +520,7 @@ margin-right: auto;
 
   }
 
-  .box9-2{
-    width:40%;
-  margin-left: 30%;
-}
+
 
 .number{
   font-size: 1.5rem;
@@ -598,7 +595,7 @@ margin-right: auto;
 
   .box9{
     width: 100%;
-    height: 1000px;
+    height: 400px;
     background-color: whitesmoke;
     margin: 0;
   }
@@ -612,11 +609,6 @@ dd{
   .box9-1{
     width: 100%;
   }
-
-  .box9-2{
-    width: 100%;
-  margin-left: 4%;
-}
 
 .number{
   font-size: 1.5rem;
@@ -647,19 +639,14 @@ dd{
     display: block; 
  }
 
+.textarea{
+   width: 60%;
+ }
+
   .boxQb{
     display: none;
     }
 
-}
-
-}
-/* 950px以下 */
-@media (max-width: 1220px) {
-  .box9-2{
-    width: 100%;
-  margin-left:auto;
-  margin-right: auto;
 }
 
 }
