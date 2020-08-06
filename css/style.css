@@ -3,7 +3,6 @@ body{
   font-family: 'M PLUS 1p', sans-serif;
 }
 
-
 .global-nav {
   position: fixed;
   right: -300px; /* これで隠れる */
@@ -101,9 +100,6 @@ body{
   top: 20px;
 }
 
-
-
-
 .boxA{
   display: flex;
 }
@@ -149,7 +145,7 @@ z-index: 1;
   width: 80%;
 }
 
-ul{
+.side{
   display: flex;
   list-style: none;
   text-decoration: none;
@@ -203,7 +199,6 @@ span{
 	cursor:pointer;
 	border-top:2px solid rgba(255,255,255,0.2);
   border-bottom:2px solid rgba(0,0,0,0.2);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
 .btn p{
@@ -261,7 +256,35 @@ width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
+  animation:popup 10s forwards;
+  visibility: hidden;
 }
+
+@keyframes popup{
+  0%{
+    transform: translateY(50px);
+    visibility: visible;
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  20%{
+    transform: none;
+    opacity: 1;
+  }
+  80%{
+    transform: none;
+ opacity: 1;
+  }
+  100%{
+    transform: translateY(50px);
+    visibility: hidden;
+  opacity: 0;
+  }
+}
+
+
+
+
 
 .buttonA{
 width: 50%;
@@ -286,9 +309,18 @@ display: flex;
 
 .buttonB{
   width: 50%;
-  background-color: orange;
+  background:hsl(200,100%,40%);
   border-radius:4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  cursor: pointer;
+  transition: background .3s;
 }
+
+.buttonB:hover{
+  background:hsl(200,100%,45%);
+}
+
+
 
 .box3{
   width: 33.333%;
@@ -324,7 +356,7 @@ width: 99%;
 
 /* コンテンツが浮かび上がる仕様 */
 /* 画面外にいる状態 */
-.fadein {
+/* .fadein {
   opacity: 0.1;
   transform: translate(0, 50px);
   transition: all 2000ms;
@@ -334,7 +366,7 @@ width: 99%;
 .fadein.scrollin {
   opacity: 1;
   transform: translate(0, 0);
-}
+} */
 
 
 .box5 h3{
@@ -444,7 +476,7 @@ margin-right: auto;
 
 
 .box8{
-  width: 100%;
+  width: auto;
   background-color: lightgrey;
   color: white;
   height: 400px;
@@ -454,19 +486,20 @@ margin-right: auto;
 .box8 p{
   border-bottom: 1px solid white;
   text-align: center;
-  width: 80%;
+  width: 100%;
   padding-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .footli{
-  font-size: 0.7rem;
-  padding:10%;
+  padding-top: 10%;
 }
 
 .footli li{
-  margin-left:1%;
+  display: inline-block;
+  font-size: 0.5rem;
+  margin-left:1.5%;
 }
 
 .text{
@@ -547,8 +580,9 @@ margin-right: auto;
     height: 380px;
   }
 
-  .footli{
+  .footli li{
     display: block; 
+    font-size: 0.7rem;
  }
 
   .boxQb{
