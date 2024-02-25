@@ -1,0 +1,1425 @@
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif
+}
+:root{
+--color-black:#000;
+}
+
+
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+z-index: 999;
+width: 100%;
+height: 100%;
+background:#333;
+text-align:center;
+color:#fff;
+  font-size: 3rem;
+  font-family:  "din-2014", sans-serif;;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+position: absolute;
+top: 50%;
+left: 50%;
+  z-index: 999;
+width: 30%;
+transform: translate(-50%, -50%);
+color: #fff;
+
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.toptext {
+  font-size: 6.16667vw;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  font-weight: bold;
+}
+.fwlap{
+  flex-wrap: wrap;
+}
+
+
+
+.inner-area {
+  max-width: 1000px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-evenly;
+}
+.jc{
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+
+/* タイトルを順番に */
+.js-index1,
+.js-index2,
+.js-index3,
+.js-index4,
+.js-index5,
+.js-index6,
+.js-index7,
+.js-index8,
+.js-index9,
+.js-index10,
+.js-index11,
+.js-index12,
+.js-index13,
+.js-index14,
+.js-index15,
+.js-index16 {
+  opacity: 0;
+  transform: translate(0, 100px);
+  /* フェードインで動く高さを指定 */
+  transition: all 1000ms;
+}
+
+.title-effect {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+.section {
+  background-size: cover;
+  /*--背景画像のサイズ--*/
+  background-attachment: fixed;
+  /*--背景画像の固定--*/
+  background-repeat: no-repeat;
+  /*--背景画像の繰り返し--*/
+  background-position: center center;
+  padding: 30px 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 80px 0;
+}
+
+.background-slider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    z-index: 1;
+  }
+.about-bg {
+  background-image: url(/images/about-bg.jpg);
+}
+
+.skill-bg {
+  background-image: url(/images/skill-bg.jpg);
+}
+
+.message-bg {
+  background-image: url(/images/service-bg.jpg);
+}
+
+h1 {
+  font-size: 6.16667vw;
+  letter-spacing: 0.5px;
+  line-height: 0.5;
+}
+
+h2 {
+  font-size: 4.16667vw;
+  font-weight: bold;
+  font-family: "din-2014", sans-serif;
+  text-align: center;
+  margin: 30px 0;
+  color: #333;
+}
+
+/* トップへ戻る */
+.to-top {
+  position: fixed;
+  backface-visibility: hidden;
+  right: 5%;
+  bottom: 20%;
+  z-index: 70;
+  cursor: pointer;
+}
+
+.to-top-item {
+  writing-mode: vertical-rl;
+}
+
+.to-top-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 1px;
+  height: 5.55556vw;
+  background: var(--color-black);
+  transition-duration: 0.4s;
+}
+
+/* メニュー */
+.js-menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background: #ccc;
+  bottom: -1500px;
+  transition: all 0.5s;
+}
+
+.js-menu-title {
+  position: absolute;
+  top: 41%;
+  left: 10%;
+}
+
+.js-top-description {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  z-index: 10;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.js-menu-list {
+  position: absolute;
+  top: 39%;
+  right: 10%;
+  font-size: 40px;
+}
+
+.js-menu-list ul {
+  list-style: none;
+  font-weight: 100;
+  cursor: pointer;
+
+}
+
+.js-menu-list__item {
+  margin: 1.08333vw 0;
+  font-weight: bold;
+
+}
+
+.js-menu-list__item:first-child {
+  margin-top: 0;
+}
+
+.open {
+  transform: translateY(-1500px);
+}
+
+#wrap {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.logo {
+  position: fixed;
+  top: 6%;
+  left: 6%;
+  z-index: 101;
+}
+
+.bg-slider {
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu-circle {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background-color: #333;
+  position: fixed;
+  top: 40%;
+  left: 5%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-circle:hover {
+  background-color: var(--color-black);
+}
+
+.top-text {
+  position: absolute;
+  top: 41%;
+  left: 10%;
+  z-index: 1;
+}
+
+.top-description {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  z-index: 1;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.article {
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.smalltxt {
+  font-size: 1.5vw;
+  line-height: 2;
+}
+
+/* NEWS */
+.news {
+  margin: 100px 0 50px 0;
+  position: relative;
+}
+
+.news p {
+  z-index: 3;
+}
+
+.news::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 42vw;
+  transition-duration: 0.4s;
+  width: 150px;
+  height: 1px;
+  background: #fff;
+  opacity: 1;
+  z-index: 2;
+}
+
+.news::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 50vw;
+  width: 150px;
+  height: 1px;
+  background: var(--color-black);
+  transition-duration: 0.4s;
+  z-index: 1;
+}
+
+.news:hover::before {
+  transform: translateX(-8vw);
+}
+
+/* About */
+.box {
+  padding: 50px 0 100px 0;
+}
+
+/* .about{
+  position: relative;
+} */
+/* .article-bg{
+  position: absolute;
+  background-attachment: fixed;
+  background-image: url(../images/article-bg.jpg);
+  height: 70vh;
+  background-position: left;
+  background-size: cover;
+  right:0px;
+  top:83px;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.3;
+} */
+
+
+.box .flexbox {
+  margin: 80px 0;
+}
+
+.profile {
+  width: 50%;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile dt {
+  line-height: 2;
+}
+
+.prof {
+  width: 40%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Service */
+.service .flexbox {
+  justify-content: space-around;
+}
+
+.flexbox-parts {
+  width: 30%;
+}
+
+.flexbox-parts h3 {
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.flexbox-parts img {
+  margin: 20px auto;
+  display: block;
+}
+
+.flexbox-parts p {
+  width: 100%;
+  line-height: 1.9;
+}
+
+/* skill */
+.skill {
+  position: relative;
+}
+
+/* .article-bg2{
+  position: absolute;
+  background-image: url(../images/article-bg2.jpg);
+  height: 70vh;
+  background-position: revert;
+  background-size: cover;
+  right: -283px;
+  top:83px;
+  width: 50vw;
+  z-index: -1;
+  opacity: 0.3;
+} */
+.skill .flexbox {
+  justify-content: space-between;
+}
+
+.gridbox {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  width: 30%;
+}
+
+.slider {
+  max-width: 500px;
+}
+
+.text {
+  width: 60%;
+}
+
+.text dl {
+  line-height: 2;
+}
+
+.text dl dt {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Works */
+.works {
+  background-color: #f8f8ff;
+  padding: 50px 0;
+}
+
+.works .flexbox {
+  justify-content: space-between;
+}
+
+.works-list img {
+  width: 290px;
+  height: 150px;
+  box-shadow: 10px 10px #ccc;
+  transition: 0.4s;
+}
+.works-list img:hover{
+  transform: scale(1.1);
+}
+.works-list ul {
+  display: flex;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.works-list p{
+  text-align: center;
+}
+.works-list ul li {
+  padding: 20px 20px;
+  list-style: none;
+  text-align: center;
+  z-index: 9999;
+}
+
+.works-list ul li p {
+  padding-top: 20px;
+}
+
+/* message */
+
+.message h3 {
+  text-align: center;
+  font-size: 2.333378vw;
+  margin-bottom: 50px;
+  line-height: 1.3;
+
+}
+
+.message-text {
+  line-height: 1.8;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+/* contact */
+.contact {
+  background-color: #ccc;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.contact-ttl {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-item,
+.contact-body {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-item {
+  text-align: left;
+  width: 30%;
+  background-color: #eee;
+}
+
+.contact-contents__item-title {
+  padding: 10px 0;
+}
+
+.contact-body {
+  width: 70%;
+}
+
+.wpcf7 input[type="email"],
+.wpcf7-text {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 400px;
+}
+
+.form-select {
+  width: 180px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+
+}
+
+
+.wpcf7-textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+}
+
+.contact-contents__btn {
+  width: 250px;
+  background-color: var(--color-black);
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  margin: 20px auto 0 auto;
+  font-size: 16px;
+  padding: 15px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+
+/* footer */
+.footer {
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 20px 0;
+
+}
+
+.copyright {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 作品詳細 */
+.detail-top-pic {
+  width:100%;
+  margin: 50px 0;
+}
+.detail-pic_box{
+  width: 33%;
+}
+
+.detail-list {
+  margin-bottom: 50px;
+}
+
+.detail__list-item {
+  display: flex;
+}
+
+.detail__list-item dt {
+  width: 30%;
+  color: #fff;
+  font-size: 16px;
+  border-bottom: 3px solid #fff;
+  background-color: #888;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail__list-item dd {
+  width: 70%;
+  padding: 15px 0 14px 10px;
+  font-size: 14px;
+  border-bottom: 3px solid #888;
+}
+
+.detail-pic {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.detail-pic-left {
+  width: 40%;
+}
+
+.detail-pic-right {
+  width: 40%;
+}
+
+.detail-pic-left img,
+.detail-pic-right img {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 50px;
+  text-align: center;
+  margin: 30px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-anime{
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #555;
+  padding: 10px 30px;
+  text-align: center;
+  outline: none;
+  transition: ease .2s;
+  margin: 50px 0;
+}
+
+
+.btn-anime span {
+position: relative;
+z-index: 3;
+color:#333;
+}
+
+.btn-anime:hover span{
+color:#fff;
+}
+
+
+.bgleft:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+
+background:#333;
+width: 100%;
+height: 100%;
+transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+transform: scale(0, 1);
+transform-origin: right top;
+}
+
+.bgleft:hover:before{
+transform-origin:left top;
+transform:scale(1, 1);
+}
+
+.back {
+  background-color: var(--color-black);
+  color: #fff;
+}
+
+.detail-title {
+  font-size: 1.16667vw;
+  letter-spacing: 3px;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.the_title{
+  width: 480px;
+  padding: 40px;
+  font-family: Dosis, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", cursive;
+}
+.the_title-block{
+  display: block;
+  font-size: 11px;
+}
+.the_title-block dl{
+  display: flex;
+}
+.the_title-block dt{
+  color: #bbb;
+}
+.the_title-block dd{
+  color: #222;
+}
+.mission {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  transition: all 2s;
+  margin-top: -31px;
+}
+
+.mission-h2 {
+  position: sticky;
+  top: -100px;
+  left: 0;
+  text-align: left;
+  font-size: 8rem;
+  line-height: 8rem;
+  position: sticky;
+  padding-left: 11%;
+  box-sizing: border-box;
+}
+
+.bigtext {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  color: #ccc;
+}
+
+.scroll-down {
+  display: block;
+  margin: 200px auto 100px auto;
+  text-align: center;
+  transform: translate3d(0px, 0px, 0px);
+  inset: 0px auto auto 0px;
+  max-height: 210px;
+  height: 210px;
+  padding: 0px 0px 40px;
+  line-height: 2;
+  transition: all 2s;
+}
+
+.scroll-down-title {
+  font-size: 2.2rem;
+  line-height: 5rem;
+}
+
+.scroll-down-message {
+  color: #a0a0a0;
+  font-size: 3rem;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.scroll-down-text {
+  color: #a0a0a0;
+  font-size: 2rem;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.h2-move {
+  transform: translateY(100px);
+  transition: all 2s;
+  color: rgba(255, 255, 255, 0.1);
+
+}
+
+.color-change {
+  background-color: var(--color-black);
+}
+
+.color-change-white {
+  background-color: #fff;
+}
+
+.sc-first {
+  height: 10vh;
+  transition: all 2s;
+}
+
+.typing-effect {
+  width: 4ch;
+  animation: typing 3s steps(4),
+      blank 1s step-end infinite;
+  white-space: nowrap;
+}
+
+.sticky {
+  position: sticky;
+  transition: all 2s;
+  top: 0;
+}
+
+.sticky2 {
+  position: sticky;
+  transition: all 2s;
+  top: 0;
+}
+
+.scroll-down-inner1 {
+  height: 1500px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.scroll-down-inner2 {
+  height: 1100px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-subject {
+  text-align: left;
+  padding-left: 11%;
+  box-sizing: border-box;
+  font-size: 8rem;
+  line-height: 8rem;
+  z-index: 0;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.TextTyping {
+  text-align: center;
+}
+
+.TextTyping span {
+  display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+  content: "|";
+  animation: typinganime .8s ease infinite;
+}
+
+.line {
+  position: absolute;
+  bottom: -100%;
+  right: 5%;
+}
+
+.about-section {
+  margin: 50px 0;
+}
+
+.about-section-block p,
+.about-section-block li {
+  font-size: 20px;
+}
+
+.about-section-block {
+  margin: 70px 0;
+}
+
+.about-mid-bg {
+  width: 100%;
+  height: 300px;
+}
+
+.about-title {
+  font-size: 1.3rem;
+  text-align: left;
+  letter-spacing: 0.33rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.wide-border {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.wide-border::after {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: #d9ddd9;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  z-index: -1;
+}
+
+.about-list {
+  line-height: 2;
+  letter-spacing: 0.11rem;
+  margin-top: -0.83rem;
+  margin-bottom: -1.88rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-list dt {
+  width: 48px;
+  margin-right: 24px;
+}
+
+.about-list dt,
+.about-list dd {
+  margin-bottom: 1.16rem;
+}
+
+.about-list dd {
+  width: calc(100% - 72px);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.bigimg {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bigimg img {
+  width: 100%;
+}
+
+.close-btn {
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.close-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+.pic-item{
+  width: 30%;
+  margin-bottom: 30px;
+}
+.pic-item img {
+  width: 300px;
+  height: 225px;
+  object-fit: cover;
+}
+.pic-item p{
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* フォーム */
+#contact .main-subject{
+  color: var(--color-black);
+}
+/* 全幅指定 */
+.full-width {
+  margin: 0 ;
+  padding: 10px;
+}
+/* pタグの余白を削除 */
+.wpcf7-form p {
+  margin-bottom: 0;
+}
+/*  フォームの幅（自由に変えてOK） */
+.contactForm {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* 各項目の下部余白 */
+.contact_item {
+  margin-bottom: 2.5rem;
+}
+/* 項目名 */
+.label {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-bottom: .6rem;
+  font-weight: bold;
+}
+/* 必須タグと任意タグ共通のスタイル */
+.label_tag {
+  font-size: 1.5rem;
+  color: #ffffff;
+  border-radius: .3rem;
+  margin-right: 1rem;
+  padding: 5px 10px;
+}
+/* 必須タグ */
+.label_must {
+  background-color: #ff0000;
+}
+/* 任意タグ */
+.label_option {
+  background-color: #888988;
+}
+/* 名前やメールアドレスなどユーザーが入力する箇所 */
+.inputs {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="text"],input[type="email"] {
+  border: solid 1px #707070;
+  padding: .5rem;
+  font-size: 1.8rem;
+}
+/* お問い合わせ内容を入力する箇所 */
+textarea.form-control {
+  border: solid 1px #707070;
+  padding: .5rem;
+  height: 207px;
+  font-size: 1.8rem;
+}
+/* ボタン */
+.btnArea {
+  text-align: center;
+}
+.name_first{
+  margin-right: 3%;
+}
+input[type="submit"]{
+  background: var(--color-black);
+  width: 280px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  letter-spacing: .5em;
+  text-indent: .5em;
+  font-weight: bold;
+  padding: 1.4rem 0;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: .3rem;
+  transition: all .3s;
+  
+}
+/* ボタンにホバーした時 */
+input[type="submit"]:hover {
+  color: var(--color-black);
+  background-color: #ffffff;
+  border-color: var(--color-black);
+}
+/* ローダー */
+.wpcf7 .ajax-loader {
+  display: block;
+  margin: 0 auto;
+}
+/* モバイル版 */
+@media screen and (max-width: 480px) {
+  .contact_item {
+      margin-bottom: 1.6rem;
+  }
+  .label {
+      font-size: 1.5rem;
+      margin-bottom: .4rem;
+  }
+  .label_tag {
+      font-size: 1.1rem;
+  }
+  input[type="text"],input[type="email"] {
+      padding: .4rem;
+      font-size: 1.5rem;
+  }
+  textarea {
+      padding: .4rem;
+      font-size: 1.5rem;
+  }
+  input[type="submit"]{
+      font-size: 1.5rem;
+  }
+}
+
+@keyframes typinganime {
+  from {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* .js-menu{
+      bottom: 0;
+      top: 0;
+  } */
+  .inner-area{
+      padding: 0 ;
+      box-sizing: border-box;
+  }
+  .open {
+      transform: translateY(-1500px);
+  }
+
+  .menu-circle {
+      width: 10vw;
+      height: 10vw;
+      top: 25%
+  }
+
+  h1 {
+      font-size: 9.16667vw;
+  }
+
+  .smalltxt,
+  .top-description,
+  .js-top-description {
+      font-size: 3.5vw;
+  }
+
+  .box {
+      padding: 0 20px ;
+      box-sizing:border-box;
+  }
+
+  h2 {
+      font-size: 16.16667vw;
+  }
+
+  .to-top {
+      right: 13%;
+  }
+
+  .flexbox {
+      display: block;
+  }
+
+  .flexbox-parts {
+      width: 100%;
+      margin-bottom: 50px;
+  }
+
+  .flexbox-parts p {
+      padding: 0 40px;
+      box-sizing: border-box;
+  }
+
+  .js-menu-list {
+      position: absolute;
+      top: 67%;
+      left: 10%;
+      font-size: 4vw;
+  }
+
+  .prof {
+      width: 100%;
+      height: 50%;
+      display: block;
+      margin: 0 auto 30px auto;
+  }
+
+  .profile {
+      width: 100%;
+      padding: 0 30px;
+      box-sizing: border-box;
+  }
+  .works-list img {
+      width: 100%;
+      height: auto;
+      box-shadow: 4px 4px #ccc;
+  }
+  .gridbox {
+      grid-template-columns: 33% 33% 33%;
+      width: 100%;
+      margin-bottom: 50px;
+  }
+  .contact {
+      padding:20px;
+  }
+  .gridbox img {
+      display: block;
+      margin: 0 auto;
+  }
+
+  .text {
+      width: 100%;
+      padding: 0 40px;
+      box-sizing: border-box;
+  }
+
+  .text dd {
+      line-height: 2;
+      margin-top: 10px;
+      margin-bottom: 20px;
+  }
+
+  .news {
+      text-align: center;
+  }
+
+  .news::before {
+      top: 39px;
+      right: 45vw;
+  }
+
+  .news::after {
+      top: 39px;
+      right: 17px;
+  }
+
+  .slick-next:before {
+      display: none;
+  }
+
+  .slick-next {
+      display: none;
+      right: 0;
+  }
+
+  .slick-slide img {
+      width: 100%;
+  }
+
+  .message-flex {
+      padding: 20px;
+      box-sizing: border-box;
+  }
+
+  .message h3 {
+      font-size: 6.333378vw;
+  }
+
+  .message-flex:nth-child(4) {
+      margin-bottom: 50px;
+  }
+
+  .works h3 {
+      margin-bottom: 30px;
+      text-align: center;
+  }
+
+  .contact-contents__item--required {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .wpcf7 input[type="email"],
+  .wpcf7-text,
+  .wpcf7-textarea {
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .works-left p {
+      margin-bottom: 20px;
+      padding-left: 20px;
+  }
+
+  .works-left h3 {
+      font-size: 5.5vw;
+  }
+
+  .slider {
+      max-width: 100%;
+  }
+  .works-list ul{
+      display: flex;
+  }
+  .works-list ul li {
+      width:39%;
+      display: block;
+      margin: 0 auto;
+  }
+  .works-list p{
+      padding-bottom: 50px;
+  }
+  .mission{
+      padding: 0 20px ;
+      box-sizing: border-box;
+  }
+  .mission-h2,.main-subject{
+      font-size: 4rem;
+      line-height: 7rem;
+      padding-left: 0;
+  }
+  .scroll-down-inner2 {
+      height:77vh;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  .scroll-down-message{
+
+      font-size: 1.5rem;
+ 
+  }
+  .scroll-down-text {
+      font-size: 1.5rem;
+  }
+  .pic-item{
+      width: 100%;
+  }
+  .pic-item img{
+      width: 100%;
+  }
+  .detail-pic {
+      flex-direction: column;
+  }
+  .detail-pic_box {
+      width:100%;
+  }
+  .the_title{
+      width: 100%;
+      padding: 20px 0;
+  }
+  
+}
+
+@media screen and (max-width:391px){
+  .works-list ul li {
+      width:37%;
+      display: block;
+      margin: 0 auto;
+  }
+}
